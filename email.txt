@@ -1,0 +1,3 @@
+Attached is a OpenVPN config file encyrpted with aescyrpt.
+
+More info on aescyprt can be found at http://www.aescrypt.com/.
