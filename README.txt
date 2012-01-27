@@ -238,3 +238,18 @@ $ /sbin/sysctl -w net.ipv4.ip_forward=1
 net.ipv4.ip_forward = 1
 
 If routing is configured correctly on the router, packets should start flowing between the interfaces on the server.
+
+
+This Easy OpenVPN as the abilty to email encypted client config file.  Below is a basic how-to for setting up a Gmail email relay.
+
+# yum install sendmail sendmail-cf cyrus-sasl-plain cyrus-sasl-md5
+
+# mkdir /etc/mail/auth
+# chmod 700 /etc/mail/auth
+# cd /etc/mail/auth
+
+Edit the file /etc/mail/auth/client-info with your Gmail username and password.
+
+# makemap -r hash client-info.db < client-info
+# chmod 600 client-info client-info.db
+#service sendmail restart
